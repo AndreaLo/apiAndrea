@@ -19,6 +19,7 @@ class ViviendaMujeres2016 extends Migration
             $table->integer('districte');
             $table->string('barrio');
             $table->integer('total');
+            $table->integer('capdona');
             $table->integer('unamujer');
             $table-> integer('dosmujeres');
             $table->integer('tresomasmujeres');

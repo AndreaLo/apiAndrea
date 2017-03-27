@@ -1,6 +1,8 @@
 <?php
 
+use App\PisosOcupadosPorMujeres;
 use Illuminate\Http\Request;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +17,14 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/viviendas', 'ViviendasController@getAll');
+Route::get('/distritos', function(Request $request) {
+    $barris = PisosOcupadosPorMujeres::distinct()->select("barrio","districte","id","total","unamujer","dosmujeres","tresomasmujeres")->get();
+    return response()->json( $barris );
+});
+Route::get('/distritos/{id}', function(Request $request, $distrito) {
+    $barri = PisosOcupadosPorMujeres::select("barrio","districte","id","total","unamujer","dosmujeres","tresomasmujeres")->where("districte",$distrito)->get();
+    return response()->json( $barri );
+});
 Route::get('/ping', function(Request $request) {
     return "pong! :)";
 });

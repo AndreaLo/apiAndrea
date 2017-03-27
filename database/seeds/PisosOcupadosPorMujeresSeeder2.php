@@ -26,9 +26,10 @@ class PisosOcupadosPorMujeresSeeder2 extends Seeder
                 $viviendas->districte = $data[0];
                 $viviendas->barrio = $data[1];
                 $viviendas->total = $data[2];
-                $viviendas->unamujer = $data[3];
-                $viviendas->dosmujeres = $data[4];
-                $viviendas->tresomasmujeres = $data[5];
+                $viviendas->capdona = $data[3];
+                $viviendas->unamujer = $data[4];
+                $viviendas->dosmujeres = $data[5];
+                $viviendas->tresomasmujeres = $data[6];
                 $viviendas->save();
 
             }

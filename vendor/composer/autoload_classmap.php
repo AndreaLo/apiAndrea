@@ -542,4 +542,5 @@ return array(
     'SebastianBergmann\\Version' => $vendorDir . '/sebastian/version/src/Version.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/src/Template.php',
     'ViviendaMujeres2016' => $baseDir . '/database/migrations/2017_03_26_173831_viviendaMujeres2016.php',
+    'viviendaMujeres2016' => $baseDir . '/database/seeds/viviendaMujeres2016.php',
 );
